@@ -89,7 +89,6 @@ justify-content: center; align-items: center;}
 
 // 슬라이드
 #slidebox {
-    background-color: $bgColor1;
     width: 100%;
     height: 460px;}
 
@@ -280,26 +279,49 @@ color: #1E9EFF;}
 
 // 이벤트
 #event {
-    background-color: gold;
     width: 100%;
     height: 168px;
     display: flex; justify-content: center;
 }
-.eventbox {width: 1170px; height: 138px; background-color: rgb(4, 204, 4);}
+.eventbox {width: 1170px; height: 138px; position: relative;}
 .eventbox h2 {@include h2title;}
+.eventwrap {width: 1160px; height: 90px; overflow: hidden;}
+.eventslide {width: 3495px; height: 100%;}
+.eventslide li {width: 376px; height: 100%; float: left; margin-left: 10px; background-color: powderblue; border-radius: 5px; display: flex; align-items: center;
+overflow: hidden; cursor: pointer;}
+.evtext {width: 200px; height: 40px; color: #fff; font-family: 'Pretendard';
+font-weight: 700; margin:0px 35px 0px 25px; font-size: 16px; line-height: 20px;}
+.eventslide li img {width: 70px; box-shadow: #1f1f1f 1px 0px 80px 1px;}
 
+.evprev {@include slidebtn; position: absolute; top: 50%; left: -10px;}
+.evprev:hover {color: #c2c2c2; }
+
+.evnext {@include slidebtn; position: absolute; top: 50%; right: -10px;}
+.evnext:hover {color: #c2c2c2;}
+
+.eventslide li:nth-of-type(1) {background-color: #096377;}
+.eventslide li:nth-of-type(2) {background-color: #71BAAF;}
+.eventslide li:nth-of-type(3) {background-color: #4a5fd3;}
+.eventslide li:nth-of-type(4) {background-color:rgb(158, 65, 212);}
+.eventslide li:nth-of-type(5) {background-color:rgb(243, 46, 11);}
+.eventslide li:nth-of-type(6) {background-color:rgb(243, 11, 50);}
+.eventslide li:nth-of-type(7) {background-color:rgb(108, 34, 143);}
+.eventslide li:nth-of-type(8) {background-color:rgb(224, 118, 19);}
+.eventslide li:nth-of-type(9) {background-color:rgb(53, 206, 122);}
 
 // 책
-#novel {
+#choice {
     background-color: blue;
     width: 100%;
-    height: 403px;
+    height: 800px;
+    display: flex; justify-content: center; align-items: flex-end;
 }
-// https://demo.kaliumtheme.com/bookstore/?_ga=2.156291251.989023125.1658107676-271585697.1658107676 참고사이트
+
+.chobox {width: 1170px; height: 730px; background-color: gold;}
+
 
 #footer {
-    background-color: $bgColor;
     width: 100%;
     height: 447px;
+    background-color: red;
 }
-

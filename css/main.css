@@ -292,7 +292,6 @@ header {
 }
 
 #slidebox {
-  background-color: blue;
   width: 100%;
   height: 460px;
 }
@@ -1079,19 +1078,157 @@ header {
 }
 
 #event {
-  background-color: gold;
   width: 100%;
   height: 168px;
+  display: flex;
+  justify-content: center;
 }
 
-#novel {
+.eventbox {
+  width: 1170px;
+  height: 138px;
+  position: relative;
+}
+
+.eventbox h2 {
+  height: 48px;
+  padding-top: 3px;
+  margin-left: 10px;
+}
+
+.eventwrap {
+  width: 1160px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.eventslide {
+  width: 3495px;
+  height: 100%;
+}
+
+.eventslide li {
+  width: 376px;
+  height: 100%;
+  float: left;
+  margin-left: 10px;
+  background-color: powderblue;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.evtext {
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  font-family: "Pretendard";
+  font-weight: 700;
+  margin: 0px 35px 0px 25px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.eventslide li img {
+  width: 70px;
+  box-shadow: #1f1f1f 1px 0px 80px 1px;
+}
+
+.evprev {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid rgb(226, 226, 226);
+  background-color: #fff;
+  box-shadow: 1px 1px 2px rgb(180, 180, 180);
+  font-size: 16px;
+  color: #464646;
+  font-weight: 900;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+}
+
+.evprev:hover {
+  color: #c2c2c2;
+}
+
+.evnext {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid rgb(226, 226, 226);
+  background-color: #fff;
+  box-shadow: 1px 1px 2px rgb(180, 180, 180);
+  font-size: 16px;
+  color: #464646;
+  font-weight: 900;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+}
+
+.evnext:hover {
+  color: #c2c2c2;
+}
+
+.eventslide li:nth-of-type(1) {
+  background-color: #096377;
+}
+
+.eventslide li:nth-of-type(2) {
+  background-color: #71BAAF;
+}
+
+.eventslide li:nth-of-type(3) {
+  background-color: #4a5fd3;
+}
+
+.eventslide li:nth-of-type(4) {
+  background-color: rgb(158, 65, 212);
+}
+
+.eventslide li:nth-of-type(5) {
+  background-color: rgb(243, 46, 11);
+}
+
+.eventslide li:nth-of-type(6) {
+  background-color: rgb(243, 11, 50);
+}
+
+.eventslide li:nth-of-type(7) {
+  background-color: rgb(108, 34, 143);
+}
+
+.eventslide li:nth-of-type(8) {
+  background-color: rgb(224, 118, 19);
+}
+
+.eventslide li:nth-of-type(9) {
+  background-color: rgb(53, 206, 122);
+}
+
+#choice {
   background-color: blue;
   width: 100%;
-  height: 403px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.chobox {
+  width: 1170px;
+  height: 730px;
+  background-color: gold;
 }
 
 #footer {
-  background-color: gold;
   width: 100%;
   height: 447px;
+  background-color: red;
 }
