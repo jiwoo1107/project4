@@ -1,3 +1,111 @@
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url(./woff2/Pretendard-Black.woff2) format("woff2"), url(./woff/Pretendard-Black.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url(./woff2/Pretendard-ExtraBold.woff2) format("woff2"), url(./woff/Pretendard-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url(./woff2/Pretendard-Bold.woff2) format("woff2"), url(./woff/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url(./woff2/Pretendard-SemiBold.woff2) format("woff2"), url(./woff/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url(./woff2/Pretendard-Medium.woff2) format("woff2"), url(./woff/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url(./woff2/Pretendard-Regular.woff2) format("woff2"), url(./woff/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url(./woff2/Pretendard-Light.woff2) format("woff2"), url(./woff/Pretendard-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url(./woff2/Pretendard-ExtraLight.woff2) format("woff2"), url(./woff/Pretendard-ExtraLight.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url(./woff2/Pretendard-Thin.woff2) format("woff2"), url(./woff/Pretendard-Thin.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url(./woff2-subset/Pretendard-Black.subset.woff2) format("woff2"), url(./woff-subset/Pretendard-Black.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url(./woff2-subset/Pretendard-ExtraBold.subset.woff2) format("woff2"), url(./woff-subset/Pretendard-ExtraBold.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url(./woff2-subset/Pretendard-Bold.subset.woff2) format("woff2"), url(./woff-subset/Pretendard-Bold.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url(./woff2-subset/Pretendard-SemiBold.subset.woff2) format("woff2"), url(./woff-subset/Pretendard-SemiBold.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url(./woff2-subset/Pretendard-Medium.subset.woff2) format("woff2"), url(./woff-subset/Pretendard-Medium.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url(./woff2-subset/Pretendard-Regular.subset.woff2) format("woff2"), url(./woff-subset/Pretendard-Regular.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url(./woff2-subset/Pretendard-Light.subset.woff2) format("woff2"), url(./woff-subset/Pretendard-Light.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url(./woff2-subset/Pretendard-ExtraLight.subset.woff2) format("woff2"), url(./woff-subset/Pretendard-ExtraLight.subset.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url(./woff2-subset/Pretendard-Thin.subset.woff2) format("woff2"), url(./woff-subset/Pretendard-Thin.subset.woff) format("woff");
+}
 * {
   margin: 0;
   padding: 0;
@@ -814,8 +922,7 @@ header {
 
 #field {
   width: 100%;
-  height: 600px;
-  background-color: gray;
+  height: 570px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -823,37 +930,162 @@ header {
 
 .fieldbox {
   width: 1170px;
-  height: 530px;
-  background-color: gold;
+  height: 500px;
+  position: relative;
 }
 
-#booklist {
+.fieldbox h2 {
+  height: 48px;
+  padding-top: 3px;
+  margin-left: 10px;
+}
+
+.fieldt {
   width: 100%;
-  height: 100px;
-  border-bottom: 1px solid rgb(151, 151, 151);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  height: 200px;
 }
 
-#booklist li {
-  width: 190px;
+.booklist {
+  width: 1150px;
   height: 70px;
-  background-color: #1E9EFF;
+  border-bottom: 1px solid rgb(151, 151, 151);
+  justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+
+.booklist li {
+  width: 183px;
+  height: 70px;
   float: left;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
+  font-family: "Pretendard";
+  cursor: pointer;
+}
+
+.booklist li:hover, .booklist .active {
+  border-bottom: 3px #1E9EFF solid;
+  color: #1E9EFF;
+}
+
+#novelwrap {
+  width: 1155px;
+  height: 355px;
+  margin-left: 11px;
+  overflow: hidden;
+}
+
+.fslide {
+  width: 2316px;
+  height: 100%;
+}
+
+.fslide li {
+  width: 183px;
+  height: 100%;
+  margin: 0px 10px 0px 0px;
+  float: left;
+}
+.fslide li img {
+  width: 100%;
+  height: 261px;
+  border-radius: 5px;
+}
+.fslide li h4 {
+  width: 180px;
+  font-size: 16PX;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.fslide li p {
+  font-size: 14px;
+  color: #5e5e5e;
+  margin-top: 5px;
+  font-weight: 400;
+}
+.fslide li p:hover {
+  opacity: 0.5;
+}
+
+#list_a {
+  display: block;
+}
+
+#list_b {
+  display: none;
+}
+
+#list_c {
+  display: none;
+}
+
+#list_d {
+  display: none;
+}
+
+#list_e {
+  display: none;
+}
+
+#list_f {
+  display: none;
+}
+
+.fdprev {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid rgb(226, 226, 226);
+  background-color: #fff;
+  box-shadow: 1px 1px 2px rgb(180, 180, 180);
+  font-size: 16px;
+  color: #464646;
+  font-weight: 900;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+}
+
+.fdprev:hover {
+  color: #c2c2c2;
+}
+
+.fdnext {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid rgb(226, 226, 226);
+  background-color: #fff;
+  box-shadow: 1px 1px 2px rgb(180, 180, 180);
+  font-size: 16px;
+  color: #464646;
+  font-weight: 900;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+}
+
+.fdnext:hover {
+  color: #c2c2c2;
 }
 
 #event {
-  background-color: blue;
+  background-color: gold;
   width: 100%;
   height: 168px;
 }
 
 #novel {
-  background-color: orange;
+  background-color: blue;
   width: 100%;
   height: 403px;
 }

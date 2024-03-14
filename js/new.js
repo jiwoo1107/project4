@@ -60,3 +60,5 @@ $(function(){
         $('.newslide').stop().animate({marginLeft: -1158 * page},500);
     });
 })
+
+
