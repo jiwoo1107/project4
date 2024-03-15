@@ -21,11 +21,13 @@ $.ajax({
 
     const lis = $('.bestslide ol li');
 
+    
+
     for(let j=0; j < 1; j++){
 
         $(".bestslide ol li").eq(i).append('<a href="#">' + "<img src='" + data[j].thumbnail + "'/>" + "</a>");
 
-        $('.bestslide ol li').eq(i).append( "<h5>" + i + "</h5>")
+        $('.bestslide ol li').eq(i).append( "<h5>" + (i+1) + "</h5>")
 
         $('.bestslide ol li').eq(i).append('<a href="#">' + "<h4>" + data[j].title + "</h4>" + "</a>");
 

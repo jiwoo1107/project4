@@ -23,16 +23,20 @@ $.ajax({
 
 
     const many = $('.manyslide ol li');
+    let scope = ["4.7"];
+  
 
     for(let j=0; j < 1; j++){
 
         $(".manyslide ol li").eq(i).append('<a href="#">' + "<img src='" + data[j].thumbnail + "'/>" + "</a>");
 
-        $('.manyslide ol li').eq(i).append( "<h5>" + i + "</h5>")
+        $('.manyslide ol li').eq(i).append( "<h5>" + (i+1) + "</h5>")
 
         $('.manyslide ol li').eq(i).append('<a href="#">' + "<h4>" + data[j].title + "</h4>" + "</a>");
 
         $('.manyslide ol li').eq(i).append('<a href="#">' + "<p>" + data[j].authors + "</p>" + "</a>");
+
+        $('.manyslide ol li').eq(i).append("<span>"+"★"+ scope + "</span>");
     }
 
 })
@@ -50,6 +54,8 @@ $(function(){
 
         if(page < 0) {
             page = 0;
+
+
             return;
         }
         $('.manyslide').stop().animate({marginLeft: -1170 * page},500);
@@ -57,6 +63,8 @@ $(function(){
     $('.manynext').click(function(){
 
         page++;
+
+        
 
         if(page > $('.manyslide ol').length-5){
             page = $('.manyslide ol').length-5;
