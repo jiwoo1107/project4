@@ -7,11 +7,12 @@
     font-style: normal;
 }
 
-@import "fonts/pretendard";
+@import "fonts/pretendard.scss";
+
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ul,ol,li {list-style: none;}
 a {text-decoration: none; color: #333; font-family: 'Pretendard'; font-weight: 500;}
-h1,h2,h3,h4,h5,p {font-family: 'Pretendard'; color: #333;}
+h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
 
 @mixin centerbox {
     width: 1170px; height: 100%; 
@@ -33,7 +34,8 @@ box-shadow: 1px 1px 2px rgb(180, 180, 180); font-size: 16px; color: #464646; fon
     img {height: 116px; border-radius: 4px;}
     h5 {width: 80px; height: 116PX; font-size: 20px; display: flex; justify-content: center; align-items: center; font-weight: 400;}
     h4 {width: 180px; height: 25px; font-size: 16PX; display: flex; align-items: center;}
-    p { font-size: 14px; color:#5e5e5e;}
+    p { font-size: 14px; color:#5e5e5e; opacity: 0.7; font-weight: 500; margin-top:4px;
+    span {font-size: 13px; color: rgb(219, 21, 7); width: 10px; order: 5; margin-top: 5px;}}
     p:hover {opacity: 0.5;}
 }
 
@@ -77,9 +79,18 @@ header {width: 100%; height: 171px;}
 .logo img:nth-of-type(2) {padding: 10px 3px}
 
 .search {width: 280px; height: 40px; background-color: rgb(230, 230, 230); border-radius: 8px; display: flex;
-justify-content: center; align-items: center;}
-.search > img {width: 16px; height: 16px; margin-right: 10px;}
-.search > input {width: 220px; height: 40px; border: none; background-color: rgb(230, 230, 230);}
+justify-content: center; align-items: center; position: relative;}
+.search > img {width: 16px; height: 16px; margin-right: 10px; cursor: pointer;}
+.search > input {width: 220px; height: 40px; border: none; background-color: rgb(230, 230, 230); outline: none;}
+input:focus { padding: 0px 5px; color: #1E9EFF;}
+.searchbox {width: 480px; height: 200px; background-color: #fff; border: 1px solid rgb(230, 230, 230); position: absolute; top: 50px; z-index: 1;
+left: 0px; border-radius: 5px; display: none;}
+.searchbox h5 {width: 100%; text-align: center; font-size: 16px; font-weight: 400; color: #a7a7a7; padding: 45px 0px; }
+.searchbox p {color: #838383; font-size: 13px; margin: 15px 15px;
+font-weight: 600;}
+.word {width: 100%; display: flex; justify-content: space-between; }
+.word p {cursor: pointer;}
+.close:hover {opacity: 0.6;}
 
 .user {width: 20%; display: flex; justify-content: flex-end; }
 .user li {float: left; width: 35px; height: 28px; margin: 10px; padding: 3px; display: flex; justify-content: center; cursor: pointer;}
@@ -99,27 +110,37 @@ justify-content: center; align-items: center;}
     width: 100%;
     height: 460px;}
 
-.slidesize {@include centerbox; background-color: rgb(210, 231, 113); margin: 0 auto; position: relative;}
+.slidesize {@include centerbox; margin: 0 auto; position: relative;}
 
-.slidebtn {width: 100%; height: 60px; display: flex; align-items: center;}
+.slidebtn {width: 1150px; height: 60px; display: flex; align-items: center; border-top: 1px solid rgb(243, 243, 243); }
 .slideul {width: 200px; }
-.slideul li {float: left; width: 50px; display: flex; justify-content: center; align-items: center;font-size: 16px; height: 35px; font-weight: 600; cursor: pointer; }
+.slideul li {float: left; width: 50px; display: flex; justify-content: center; align-items: center;font-size: 16px; height: 35px; font-weight: 600; cursor: pointer;
+font-family: 'Pretendard';}
 .slideul li:nth-of-type(1) {background-color: #1E9EFF; border-radius: 20px;  color: #fff;  padding: 5px; margin-right: 20px; margin-left: 10px;}
 
 // 메인슬라이드
-.slidewrap {width: 100%; height: 400px; background-color: skyblue; overflow: hidden;}
-.slide {width: 1364px; height: 400px; background-color: rgb(67, 148, 137); float: left; display: flex; }
-.slide li {width: 1024px; height: 400px; background-color: rgb(39, 88, 153); float: left; margin-left: 10px; border-radius: 5px; position: relative; animation-direction: reverse}
-.slide .ms1 {background-color: gold; flex-grow: 1; flex-basis: 0px; display: block;}
-.slide .ms2 {background-color: rgb(66, 165, 132); flex-grow: 0; flex-basis: 45px; display: block;}
-.slide .ms3 {background-color: rgb(57, 30, 179); flex-grow: 0; flex-basis: 45px;}
-.slide .ms4 {background-color: rgb(223, 137, 211); flex-grow: 0; flex-basis: 45px;}
-.slide .ms5 {background-color: orange; flex-grow: 0; flex-basis: 45px;}
-.slide .ms6 {background-color: greenyellow; flex-grow: 0; flex-basis: 45px;}
+.slidewrap {width: 100%; height: 400px; overflow: hidden;}
+.slide {width: 1160px; height: 400px; float: left; display: flex; background-position: center; background-size: cover; position: relative;}
+.slide li {width: 1024px; height: 400px; float: left; margin-left: 10px; border-radius: 8px; animation-direction: reverse; overflow: hidden;
+cursor: pointer;}
+.slide .ms1 {flex-grow: 1; flex-basis: 0px; display: block; background-image: url(../img/slide_1.png);}
+.slide .ms2 {flex-grow: 0; flex-basis: 45px; display: block; background-image: url(../img/slide_2.png); background-size: cover; background-position: center;}
+.slide .ms3 { flex-grow: 0; flex-basis: 45px; display: block; background-image: url(../img/slide_3.png); background-position: center; background-size: cover;}
+.slide .ms4 {flex-grow: 0; flex-basis: 45px; display: none; background-image: url(../img/slide_4.png); background-position: center; background-size: cover;}
+.slide .ms5 { flex-grow: 0; flex-basis: 45px; display: none; background-image: url(../img/slide_5.png); background-position: center; background-size: cover;}
+.slide .ms6 {flex-grow: 0; flex-basis: 45px; display: none; background-image: url(../img/slide_6.png); background-position: center; background-size: cover;}
+.slide .ms7 { flex-grow: 0; flex-basis: 45px; display: none; 
+background-image: url(../img/slide_7.png); background-position: center; background-size: cover;}
 
-.slide .ms7 {background-color: greenyellow; flex-grow: 0; flex-basis: 45px;}
+.blurback1 {background: linear-gradient(to bottom,rgba(71, 34, 34, 0) 50%, #171646 100%); width: 100%; height: 100%;}
+.blurback2 {background: linear-gradient(to bottom,rgba(71, 34, 34, 0) 40%, #4e9b91 100%); width: 100%; height: 100%;}
+.blurback3 {background: linear-gradient(to bottom,rgba(20, 20, 20, 0) 50%, #074594 100%); width: 100%; height: 100%;}
+.blurback4 {background: linear-gradient(to bottom,rgba(20, 20, 20, 0) 50%, #04353E 100%); width: 100%; height: 100%;}
+.blurback5 {background: linear-gradient(to bottom,rgba(20, 20, 20, 0) 50%, #DC487A 100%); width: 100%; height: 100%;}
+.blurback6 {background: linear-gradient(to bottom,rgba(20, 20, 20, 0) 50%, #49B4F9 100%); width: 100%; height: 100%;}
+.blurback7 {background: linear-gradient(to bottom,rgba(20, 20, 20, 0) 50%, #4e1458 100%); width: 100%; height: 100%;}
 
-.slidetext {position: absolute; bottom: 35px; left: 35px;}
+.slidetext {position: absolute; bottom: 35px; left: 35px; }
 .slide .ms2 .slidetext{display: none;}
 .slide .ms3 .slidetext{display: none;}
 
@@ -188,11 +209,15 @@ border: 1px solid rgb(226, 226, 226); cursor: pointer;}
 .manyprev:hover {color: #c2c2c2; }
     
 .manynext {@include slidebtn; position: absolute; top: 50%; right: -10px;}
-.manynext:hover {color: #c2c2c2;}
+.manynext:hover {color: #c2c2c2; opacity: 0.6;}
 
-.manyslide ol li span {font-size: 13px; color: rgb(219, 21, 7); width: 10px;}
+.spp {order: 5; margin-top: 8px; height: 15px; display:flex; align-items: center; font-family: 'Pretendard';}
+.manyslide ol li span:nth-of-type(1) {font-size: 13px; color: rgb(219, 21, 7); width: 32px; float: left;}
 
-.person {width: 10px; font-size: 50px;}
+.manyslide ol li span:nth-of-type(2) {
+    font-size: 13px;
+    
+}
 
 
 // 엠디픽
@@ -219,8 +244,7 @@ border-radius: 5px; position: relative;}
 .mdslide li.s3 .mdbbox:nth-of-type(1) {background-color: #742e21;}
 .mdslide li.s4 .mdbbox:nth-of-type(1) {background-color: #68A0D3;}
 
-
-.mdbbox img {position: absolute; top: -40px; width: 108px; height: 140px; border-radius: 0px 3px; left: 36%;}
+.mdbbox img {position: absolute; top: -40px; width: 108px; height: 140px; border-radius: 4px 4px 0px 0px; left: 36%;}
 
 .litbox {width: 100%; height: 86px; display: flex; justify-content: center; align-items: flex-end; flex-flow: row wrap;}
 .litbox h4 {font-size: 16px; width: 100%; text-align: center; margin-top: 20px;}
@@ -250,6 +274,14 @@ border-radius: 5px; position: relative;}
     margin : 1px;
 }
 
+.spp {order: 5; margin-top: 8px; height: 15px; display:flex; align-items: center; font-family: 'Pretendard';}
+.bestslide ol li span:nth-of-type(1) {font-size: 13px; color: rgb(219, 21, 7); width: 32px; float: left;}
+
+.bestslide ol li span:nth-of-type(2) {
+    font-size: 13px;
+    
+}
+
 .bestprev {@include slidebtn; position: absolute; top: 50%; left: -10px}
 .bestprev:hover {color: #c2c2c2; }
     
@@ -258,7 +290,7 @@ border-radius: 5px; position: relative;}
 
 
 
-// 새로나온 
+// 새로나온 작품 
 #new {
     width: 100%;
     height: 473px;
@@ -316,8 +348,8 @@ display: flex; justify-content: center; align-items: flex-end;}
 display: flex; align-items: flex-start; margin-left: 10px;
 margin-bottom: 25px;}
 .booklist li {width: 183px; height: 70px; float: left;
-display: flex; justify-content: center; align-items: center; font-weight: 500; font-family: 'Pretendard';
-cursor: pointer; }
+display: flex; justify-content: center; font-weight: 500; font-family: 'Pretendard';
+cursor: pointer; font-size: 17px; line-height: 75px;}
 
 .booklist li:hover, .booklist .active {border-bottom: 3px #1E9EFF solid;
 color: #1E9EFF;}
@@ -356,10 +388,10 @@ overflow: hidden; cursor: pointer;}
 font-weight: 700; margin:0px 35px 0px 25px; font-size: 16px; line-height: 20px;}
 .eventslide li img {width: 70px; box-shadow: #1f1f1f 1px 0px 80px 1px;}
 
-.evprev {@include slidebtn; position: absolute; top: 50%; left: -10px;}
+.evprev {@include slidebtn; position: absolute; top: 52%; left: -10px;}
 .evprev:hover {color: #c2c2c2; }
 
-.evnext {@include slidebtn; position: absolute; top: 50%; right: -10px;}
+.evnext {@include slidebtn; position: absolute; top: 52%; right: -10px;}
 .evnext:hover {color: #c2c2c2;}
 
 .eventslide li:nth-of-type(1) {background-color: #096377;}
@@ -372,16 +404,40 @@ font-weight: 700; margin:0px 35px 0px 25px; font-size: 16px; line-height: 20px;}
 .eventslide li:nth-of-type(8) {background-color:rgb(224, 118, 19);}
 .eventslide li:nth-of-type(9) {background-color:rgb(53, 206, 122);}
 
-// 책
-#choice {
-    background-color: blue;
+// 셀렉트
+#select {
     width: 100%;
-    height: 800px;
+    height: 580px;
     display: flex; justify-content: center; align-items: flex-end;
 }
-.chobox {width: 1170px; height: 730px; background-color: gold;}
+.slbox {width: 1170px; height: 481px; position: relative; margin-bottom: 50px}
+.slbox h2 {@include h2title;}
+.slwrap {width: 1150px; overflow: hidden; background-color: rgb(43, 42, 39); margin-left: 10px;}
+.slslide {width: 2360px; padding: 0px 9px 0px 0px;}
+
+.slslide li {width: 383px; height: 432px; background-color: green; float: left; display: flex; justify-content: center; align-items: flex-end; flex-flow: row wrap; cursor: pointer;}
+
+.slslide li:nth-of-type(1) {opacity: 0.4;}
+.slslide li:nth-of-type(2) {opacity: 1;}
+.slslide li:nth-of-type(3) {opacity: 0.4;}
+.slslide li:nth-of-type(4) {opacity: 0.4;}
+
+.textbox {width: 90%; height: 140px;}
+.recom {font-size: 17px; font-weight: 600; font-family: 'Pretendard';}
+.textbox h1 {color: #fff; margin-bottom: 15px; margin-top: 15px; font-size: 30px;}
+.textbox p {color: #fff; font-weight: 400; font-size: 15px;
+opacity: 0.7; line-height: 23px;}
+
+.slslide li img {width: 150px; box-shadow: 3px 3px 8px rgb(56, 56, 56);}
+
+.slprev {@include slidebtn; position: absolute; top: 50%; left: 330px; z-index: 1;}
+.slprev:hover {color: #c2c2c2; }
+
+.slnext {@include slidebtn; position: absolute; top: 50%; right: 330px; z-index: 1;}
+.slnext:hover {color: #c2c2c2;}
 
 
+// 푸터
 footer {width: 100%; height: 447px; display: flex; justify-content: center; 
 align-items: flex-end;}
 .ftbox {width: 100%; height: 376px; border-top: 1px solid #e9e9e9; display: flex; align-items: flex-end;

@@ -23,7 +23,7 @@ $.ajax({
 
 
     const many = $('.manyslide ol li');
-    let scope = ["4.7"];
+    
   
 
     for(let j=0; j < 1; j++){
@@ -36,9 +36,7 @@ $.ajax({
 
         $('.manyslide ol li').eq(i).append('<a href="#">' + "<p>" + data[j].authors + "</p>" + "</a>");
 
-        $('.manyslide ol li').eq(i).append("<span>"+"★"+ scope + "</span>");
     }
-
 })
 }
 
