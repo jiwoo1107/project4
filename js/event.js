@@ -42,9 +42,11 @@ $(function(){
 
         if(page < 0) {
             page = 0;
+        
             return;
         }
         $('.eventslide').stop().animate({marginLeft: -772 * page},400);
+        
     });
     $('.evnext').click(function(){
 
@@ -52,8 +54,11 @@ $(function(){
 
         if(page > $('.eventslide li').length-6){
             page = $('.eventslide li').length-6;
+            
+
             return;
         }
         $('.eventslide').stop().animate({marginLeft: -772 * page},400);
+       
     });
 })

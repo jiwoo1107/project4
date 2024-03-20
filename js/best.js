@@ -53,6 +53,8 @@ $(function(){
             return;
         }
         $('.bestslide').stop().animate({marginLeft: -1170 * page},500);
+        $('.bestprev').fadeOut(100)
+        $('.bestnext').fadeIn(100)
     });
     $('.bestnext').click(function(){
 
@@ -63,5 +65,7 @@ $(function(){
             return;
         }
         $('.bestslide').stop().animate({marginLeft: -1170 * page},500);
+        $('.bestnext').fadeOut(100)
+        $('.bestprev').fadeIn(100)
     });
 })

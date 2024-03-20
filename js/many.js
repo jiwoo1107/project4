@@ -57,17 +57,25 @@ $(function(){
             return;
         }
         $('.manyslide').stop().animate({marginLeft: -1170 * page},500);
+        $('.manyprev').fadeOut(100)
+        $('.manynext').fadeIn(100)
     });
     $('.manynext').click(function(){
 
         page++;
 
-        
 
         if(page > $('.manyslide ol').length-5){
             page = $('.manyslide ol').length-5;
             return;
         }
         $('.manyslide').stop().animate({marginLeft: -1170 * page},500);
+        $('.manynext').fadeOut(100)
+        $('.manyprev').fadeIn(100)
     });
+
 })
+
+   
+
+   

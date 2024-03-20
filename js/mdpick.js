@@ -50,6 +50,8 @@ $(function(){
             return;
         }
         $('.mdslide').stop().animate({marginLeft: -387 * page},400);
+        $('.mdprev').fadeOut(100)
+        $('.mdnext').fadeIn(100)
     });
     $('.mdnext').click(function(){
 
@@ -60,5 +62,7 @@ $(function(){
             return;
         }
         $('.mdslide').stop().animate({marginLeft: -387 * page},400);
+        $('.mdnext').fadeOut(100)
+        $('.mdprev').fadeIn(100)
     });
 })

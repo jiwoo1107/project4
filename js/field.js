@@ -230,6 +230,8 @@ $(function(){
             return;
         }
         $('.fslide').stop().animate({marginLeft: -1158 * page},500);
+        $('.fdprev').fadeOut(100)
+        $('.fdnext').fadeIn(100)
     });
     $('.fdnext').click(function(){
 
@@ -240,6 +242,8 @@ $(function(){
             return;
         }
         $('.fslide').stop().animate({marginLeft: -1158 * page},500);
+        $('.fdnext').fadeOut(100)
+        $('.fdprev').fadeIn(100)
     });
 })
 

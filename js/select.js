@@ -34,17 +34,22 @@ $.ajax({
 // 슬라이드
 $('.slprev').click(function(){
     $('.slslide li:last').prependTo('.slslide');
+    $('.slslide li').eq(0).not().css({"opacity" : "0.4"})
+    $('.slslide li').eq(1).css({"opacity" : "1"})
+    $('.slslide li').eq(2).css({"opacity" : "0.4"})
     $('.slslide').css('margin-left','-383px');
-    $('.slslide').stop().animate({marginLeft:0},300);
+    $('.slslide').stop().animate({marginLeft:0},500);
 
 })
 
 $('.slnext').click(function(){
     $('.slslide').stop().animate({marginLeft: '-383px'},500, function(){
         $('.slslide li:first').appendTo('.slslide');
-        $('.slslide li').eq(0).css({"opacity" : "0.4"})
+        $('.slslide li').eq(0).not().css({"opacity" : "0.4"})
         $('.slslide li').eq(1).css({"opacity" : "1"})
         $('.slslide li').eq(2).css({"opacity" : "0.4"})
         $('.slslide').css({marginLeft:0},300);
     });
+
+
 });  

@@ -28,7 +28,7 @@ $.ajax({
     for (let j = 0; j < 1; j++) {
         $('.bookbox_wrap').eq(i).append('<div class="tobox'+ i +' tobox"></div>');
 
-        $('.tobox' + i).eq(j).append("<img src='" + data[j].thumbnail + "'/>");
+        $('.tobox' + i).eq(j).append('<a href="sub.html">' + "<img src='" + data[j].thumbnail + "'/>" + "</a>");
     
         
         let str = data[j].contents;

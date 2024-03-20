@@ -48,6 +48,8 @@ $(function(){
             return;
         }
         $('.newslide').stop().animate({marginLeft: -1158 * page},500);
+        $('.newprev').fadeOut(100)
+        $('.newnext').fadeIn(100)
     });
     $('.newnext').click(function(){
 
@@ -58,6 +60,8 @@ $(function(){
             return;
         }
         $('.newslide').stop().animate({marginLeft: -1158 * page},500);
+        $('.newnext').fadeOut(100)
+        $('.newprev').fadeIn(100)
     });
 })
 
