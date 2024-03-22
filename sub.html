@@ -152,6 +152,22 @@
                         </li>
                     </ul>
                 </div>
+            
+                <!-- 미리보기 -->
+
+                <div id="previewbox">
+                    <div class="projecthm">
+                        <h3>
+                            <span>〈</span>
+                            프로젝트 헤일메리
+                        </h3>
+                    </div>
+                    <div class="hm_contents_slide"></div>
+
+                    <div class="hm_index">
+        
+                    </div>
+                </div>
             </div>
             <!-- 작품소개 -->
             <div class="workintrobox">
@@ -270,17 +286,55 @@
                         <p>구매자 별점</p>
                         <h1>4.9</h1>
                         <span>★★★★★</span>
-                        <ul>
-                            <li>★5</li>
-                            <li>★4</li>
-                            <li>★3</li>
-                            <li>★2</li>
-                            <li>★1</li>
+                        <ul >
+                            <li>
+                                <p>★5</p>
+                                <div class="scrange">
+                                    <span class="scbar1"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <p>★4</p>
+                                <div class="scrange">
+                                    <span class="scbar2"></span>
+                                </div></li>
+                            <li>
+                                <p>★3</p>
+                                <div class="scrange">
+                                    <span class="scbar3"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <p>★2</p>
+                                <div class="scrange">
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <p>★1</p>
+                                <div class="scrange">
+                                    
+                                </div>
+                            </li>
                         </ul>
+
+                        <div class="people">
+                            <p>2,531명이 평가함</p>
+                        </div>
 
                     </div>
                     <div class="rveval">
-                        <p>이 책을 평가해주세요!</p>
+                        <div class="pbox">
+                            <p>이 책을 평가해주세요!</p>
+                        </div>
+                        
+                        <div class="starwrap">
+                        <img src="img/star_one.png" alt="" class="star1">
+                        <img src="img/star_two.png" alt="" class="star2">
+                        <img src="img/star_three.png" alt="" class="star3">
+                        <img src="img/star_four.png" alt="" class="star4">
+                        <img src="img/star_five.png" alt="" class="star5">
+                        </div>
                         <ul class="star">
                             <li>★</li>
                             <li>★</li>
@@ -291,7 +345,7 @@
                         <input name="search"
                         id="rvwrite"
                         placeholder="리뷰 작성 시 광고 및 욕설, 비속어나 타인을 비방하는 문구를 사용하시면 비공개될 수 있습니다."
-                        >
+                        onclick="alert('로그인 상태에서 가능합니다. 로그인 페이지로 이동합니다.'); return false;">
 
                         <div class="spobox">
                             <input type="checkbox"
@@ -302,13 +356,282 @@
                                 리뷰 남기기
                             </button>
                         </div>
+                        <div class="rvpopup">
+                            <img src="img/caution_icon_.png" alt="">
+                            <p class="notice">별점을 남겨주세요.</p>
+                            <span><img src="img/x_icon_.png" alt=""></span>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 댓글 -->
+        <div id="comment">
+            <div class="comment_menu">
+                <ul class="cmenu1">
+                    <li>구매자
+                        <span>376</span>
+                    </li>
+                    <li>전체
+                        <span>376</span>
+                    </li>
+                </ul>
+
+                <ul class="cmenu2">
+                    <li>최신순</li>
+                    <li>공감순</li>
+                    <li>별점 높은순</li>
+                    <li>별점 낮은순</li>
+                </ul>
+            </div>
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">lee*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2024.03.15
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>너무 좋음... 빨리 읽어보세요...</p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">hor*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2024.03.01
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>작가는 천재인듯.. 영화로도 빨리 보고싶음</p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">zon*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2024.02.01
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>sf소설은 처음인데도 불구하고 너무 재밌고 술술 읽혀서 좋았습니다!</p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">gyo*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2024.03.15
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>눈물나요! 나도 우주여행!! </p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">gnu*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2024.03.15
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>마션읽고 너무 감동해서 프로젝트 헤일메리까지 보고 왔어요! 더 좋네요!! 한번 더 읽으러갑니다.!!</p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">son*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2023.01.30
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>이거.. 왜 안봐..?? 빨리 보세요</p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">rag*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2023.12.18
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>전작보다 훨씬 흡입력 있고, 전개도 매끄러워서 잘 보았습니다. <br> 주인공과 인물들이 매력적이네요.</p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">lim*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2023.12.11
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>시간 가는줄 모르고 봤다.</p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">wrr*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2023.12.12
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>로키 너무 귀여움!!! <br>
+                    좋음 좋음 좋음
+                    </p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="com_num">
+                <div class="com_num_left">
+                    <p class="left_star">★★★★★</p>
+                    <p class="left_name">rol*** <span>구매자</span></p>
+                    <p class="left_date">
+                        2023.12.05
+                    </p>
+                    <p class="left_dec">
+                       신고ㆍ차단
+                    </p>
+                </div>
+                <div class="com_num_right">
+                    <p>지루할 틈이 없네요.. 다시 읽어도 재밌다! </p>
+                    <div class="combtn">
+                        <button><img src="img/chat.png" alt="">댓글</button>
+                        <button><img src="img/good.png" alt="">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cmentbox"></div>
+
+            <div class="see_more">
+                <p>
+                    <span>10</span>개 더보기 <span>▼</span>
+                </p>
+            </div>  
+
+        </div>
+
+        <!-- 앤디 위어 우주 3부작 -->
+        <div class="three">
+            <div class="three_title">
+                <h2>앤디 위어 우주 3부작</h2>
+            </div>
+                <ul class="thrlist">
+                    <li></li>
+                    <li></li>
+                </ul>
+        </div>
+
+        <!-- 이 책과 함께 구매한 책 -->
+        <div class="buy_together">
+            <div class="buy_title">
+                <h2>이 책과 함께 구매한 책</h2>
+            </div>
+            <ul class="buy_list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+
      </div>
 
 
-        
 
         <div id="section2">
             <img src="img/sideimg.webp" alt="">
@@ -316,33 +639,47 @@
                 <ul class="sfbest">
                     <h5>SF 소설 베스트</h5>
                     <li>
-                        <p>듄 시리즈</p>
+                        <p>
+                            <span>1</span>
+                            듄 시리즈</p>
                     </li>
                     <li>
-                        <p>개정판 | 류츠신 삼체 3부작 1권</p>
+                        <p>
+                            <span>2</span>
+                            개정판 | 류츠신 삼체 3부작 1권</p>
                     </li>
                     <li>
-                        <p>듄 시리즈 1~6부 세트</p>
+                        <p>
+                            <span>3</span>
+                            듄 시리즈 1~6부 세트</p>
                     </li>
                     <li>
-                        <p>너머의 아이들</p>
+                        <p>
+                            <span>4</span>
+                            너머의 아이들</p>
                     </li>
                     <li>
+                        <span>5</span>
                         <p>그대 우리 사회에 어떻</p>
                     </li>
                     <li>
+                        <span>6</span>
                         <p>프로젝트 헤일메리</p>
                     </li>
                     <li>
+                        <span>7</span>
                         <p>홍락훈 SF·판타지 초단편집 세트(전2권)</p>
                     </li>
                     <li>
+                        <span>8</span>
                         <p>대여금고</p>
                     </li>
                     <li>
+                        <span>9</span>
                         <p>천 개의 파랑</p>
                     </li>
                     <li>
+                        <span>10</span>
                         <p>환상문학전집 고전 밀리터리 SF 세트</p>
                     </li>
                 </ul>
@@ -351,6 +688,73 @@
 
     </section>
 
+    <!-- 푸터 -->
+    <footer>
+        <div class="ftbox">
+            <div class="ftwrap">
+                <ul class="ftlist">
+                    <ol class="fto">
+                        <div class="tt">
+                            <img src="img/customer.png" alt="">
+                            고객센터
+                        </div>
+                        <div class="tt">
+                            <img src="img/speaker.png" alt="">
+                            공지사항
+                        </div>
+                        <li></li>
+                    </ol>
+                    <ol class="fto">
+                        <div class="tt">
+                            서비스
+                        </div>
+                        <li><p>제휴카드</p></li>
+                        <li><p>뷰어 다운로드</p></li>
+                        <li><p>CP사이트</p></li>
+                        <li><p>리디바탕</p></li>
+                    </ol>
+                    <ol class="fto">
+                        <div class="tt">
+                            기타 문의
+                        </div>
+                        <li><p>콘텐츠 제공 문의</p></li>
+                        <li><p>사업 제휴 문의</p></li>
+                    </ol>
+                    <ol class="fto">
+                        <div class="tt">
+                            회사
+                        </div>
+                        <li><p>회사 소개</p></li>
+                        <li><p>인재채용</p></li>
+                    </ol>
+                    <ol class="info">
+                        <div class="tt1">
+                            리디(주) 사업자 정보
+                        </div>
+                        <li><p>이용약관</p></li>
+                        <li><p>개인정보 처리방침</p></li>
+                        <li><p>청소년보호정책</p></li>
+                        <li><p>사업자정보확인</p></li>
+                    </ol>
+                </ul>
+                <ul class="articlebox">
+                    <article>
+                        <img src="img/facebook_icon.png" alt="">
+                    </article>
+                    <article>
+                        <img src="img/instagram_icon.png" alt="">
+                    </article>
+                    <article>
+                        <img src="img/x_twitter_icon.png" alt="">
+                    </article>
+                    <article>
+                        <img src="img/youtube_icon.png" alt="">
+                    </article>
+                    <article><img src="img/tiktok_icon.png" alt=""></article>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 

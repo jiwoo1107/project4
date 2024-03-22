@@ -7,6 +7,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'SOYOMapleBoldTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 @import "fonts/pretendard.scss";
 
 *{margin: 0; padding: 0; box-sizing: border-box;}
@@ -26,14 +33,14 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
 @mixin dttxt {
     p {font-size: 14px; line-height:23px;}}
 
-
+@mixin starfont {color: #ee7e23; font-family: 'SOYOMapleBoldTTF';}
 
 // 페이지
-    section {width: 100%; height: 7000px;  display: flex; justify-content: center;}
+    section {width: 100%; height: auto;  display: flex; justify-content: center; }
 
     // 중앙 컨텐츠
-    #section1 {width: 936px; height: 100%; background-color: rgb(250, 244, 208);}
-    .bookitbox {width: 936px; height: 626px; background-color: salmon; display: flex; flex-flow: row wrap; justify-content: space-between; padding: 20px 10px;}
+    #section1 {width: 936px; height: 100%;}
+    .bookitbox {width: 936px; height: 626px;  display: flex; flex-flow: row wrap; justify-content: space-between; padding: 20px 10px;}
     .bookimgbox {width: 220px; height: 337px;  display: flex; flex-flow: row wrap; align-content: space-between;}
     .bookimgbox img {width: 200px; height: 286px;}
     .bookimgbox button {width: 130px; height: 39px;border-radius: 5px; border: 1px solid #1E9EFF;
@@ -81,6 +88,16 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .infobox ul li span {font-weight: 400; width: 200px;}
     .infobox ul li:nth-of-type(1) p {
         height: 18px;}
+
+
+    // 미리보기
+    #previewbox {width: 1000px; height: 80%; background-color: gold; position: absolute; top: 10%; left: 24%; position: fixed; z-index: 1;
+    display: flex; flex-flow: row wrap; display: none;}
+    .projecthm {width: 80%; height: 10%; background-color: skyblue;}
+    .hm_contents_slide {width: 80%; height: 90%; background-color: rgb(169, 226, 169);}
+    .hm_index {width: 20%; height: 100%; background-color: orange; }
+
+
     
     // 작품소개
     .workintrobox {width: 100%; height: auto;  padding: 0px 10px; margin-bottom: 50px; }
@@ -150,51 +167,168 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .attext { @include dttxt; height: auto; margin-top: 15px; height: 161px; }
     .attext2 { @include dttxt; display: none;}
 
-    // 리뷰
+
+
+    // 리뷰 - 구매자 별점
     .review {width: 100%; padding: 0px 10px;   
-        background-color: #d0eeb3; height: auto;}
+        height: auto;}
    .rvtitle {@include h2titlesub;}
    
 
-   .rvbox {width: 100%; height: 286px; background-color: #f5b17a; display:flex; flex-flow: row wrap;  justify-content: center;}
-    .rvbox .rvscope {width: 120px; height: 286px; background-color: gold; display: flex; justify-content: center; flex-flow: row wrap;
+   .rvbox {width: 100%; height: 286px;  display:flex; flex-flow: row wrap;  justify-content: center;}
+    .rvbox .rvscope {width: 120px; height: 286px;  display: flex; justify-content: center; flex-flow: row wrap;
     align-content: center; float: left;}
-    .rvscope p {width: 100%; font-size: 14px; text-align: center;}
+    .rvscope p {width: 100%; font-size: 12px; text-align: center; color:#888888; font-weight: 500;}
     .rvscope h1 {width: 100%; font-size: 30px; text-align: center;}
-    .rvscope span {width: 100%; color: #ee7e23; text-align: center;}
-    .rvscope ul {width: 100px;}
-    .rvscope ul li {width: 100px; background-color: green; margin: 10px 0px; font-size: 14px;}
-
-    .rveval {width: 794px; height: 286px; background-color: orange; display: flex; justify-content: center; flex-flow: row wrap;
-    align-content: center;}
-    .rveval p {font-size: 18px; color: #525252; font-weight: 600; padding: 0px 200px;}
-    .star {height: 70px; background-color: skyblue;}
-    .star li {font-size: 40px; float: left; color: #b4b4b4; width: 64px; height: 48px; cursor: pointer;}
-    .star li:hover {color: #ee7e23;}
-    #rvwrite {width: 95%; height: 112px; border-radius: 7px; border: 2px solid #b4b4b4; outline: none; color: #525252; 
-    padding: 0px 20px; }
-    #rvwrite::placeholder {position: absolute;  font-family: 'Pretendard';top:20px; color:
-        #1b1b1b; font-size: 15px;}
-
+    .rvscope span {width: 100%; text-align: center;  margin-bottom: 7px; @include starfont;}
 
     
-    .spobox {display: flex; justify-content: right; width: 100%; align-items: center; background-color: yellow;}
+    .rvscope ul {width: 100px; }
+    .rvscope ul li {width: 100px; float: left; margin: 5px 0px; align-items: center;
+    display: flex; justify-content: flex-start;}
+    .rvscope ul li p { font-size: 12px; width: 30px;
+    font-weight: 500; font-family: 'SOYOMapleBoldTTF'; color:#888888;}
+
+    .rvscope ul li .scrange{width: 70px; height: 10px; background-color: rgb(228, 228, 228);
+    display: flex; }
+    .scrange .scbar1 {width: 85%; height: 100%; background: linear-gradient(#bdbdbd, #888888);}
+    .scrange .scbar2 {width: 15%; height: 100%; background: linear-gradient(#bdbdbd, #888888);}
+    .scrange .scbar3 {width: 2%; height: 100%; background: linear-gradient(#bdbdbd, #888888);}
+
+    .people {height: 30px; width: 85%; margin-top: 5px; line-height: 30px; font-weight: 500; color: #525252; border-top: 1px solid #888888; }
+
+
+    // 리뷰 - 리뷰남기기
+    .rveval {width: 794px; height: 286px; display: flex; justify-content: center; flex-flow: row wrap;
+    align-content: center; position: relative;}
+    .rveval .starwrap{position: absolute;
+    top: 23px;  width: 100px; height: 40px; left: 338px; }
+
+    .starwrap img {position: absolute; display: none;}
+
+    .rveval > .pbox {width: 500px; height: 50px; display: flex; justify-content: center; align-items: flex-end;}
+    .pbox p{font-size: 18px; color: #525252; font-weight: 600;}
+
+    .star {height: 70px;
+    display: flex; align-items: center;}
+    .star li {font-size: 48px; float: left; color: #b4b4b4; width: 64px; height: 48px; cursor: pointer; font-family: 'SOYOMapleBoldTTF';}
+    .star li:hover {color: #ee7e23;}
+    #rvwrite {width: 95%; height: 112px; border-radius: 7px; border: 2px solid #b4b4b4; outline: none; color: #525252; 
+    padding: 0px 20px; font-size: 15px;}
+    #rvwrite::placeholder {position: absolute;  font-family: 'Pretendard';top:20px; color:
+        #1b1b1b; font-size: 15px; }
+    
+    
+    .spobox {display: flex; justify-content: right; width: 100%; align-items: center; }
 
     .spobox input {width : 20px; height: 30px;}
     .spobox label {width : 130px; font-size: 14px;
         font-family: 'Pretendard'; height: 20px;
-    background-color: gold; text-align: center;
+     text-align: center; color: #525252;
     line-height: 20px; font-weight: 500;}
 
     .spobox > button {width: 95px; height: 30px; background-color: rgb(189, 189, 189); border: none; margin: 10px 20px; border-radius: 5px;
     color: #fff; font-family: 'Pretendard';}
     
 
+    .rvpopup {width: 420px; height: 50px; background-color: #1b1b1b; top: 15%; border-radius: 5px; left: 37%; position: fixed;
+    display: flex; justify-content: left;  opacity: 0.9; display: none; flex-flow: row wrap; padding: 15px 0px;}
+    
+    .rvpopup img {width: 20px; height: 20px; margin-left: 20px; float: left; }
+    .notice {font-size: 14px; height: 20px; display: flex; justify-content: center; width: 120px;
+    color: #f88792; line-height: 20px; float: left;}
+    .rvpopup > span img {width: 20px; height: 20px; border: none; margin-left: 220px;  cursor: pointer; }
+    .rvpopup > span:hover {opacity: 0.5;}
+
+
+    // 댓글
+    #comment {width: 100%; height: auto;  padding: 0px 10px; display: flex; flex-flow: row wrap; justify-content: center; margin-bottom: 100px;}
+    .comment_menu {width: 916px; height: 37px;  display: flex; justify-content: space-between; border-bottom: 2px solid #b4b4b4;}
+    .cmenu1 {float: left; width: 200px; }
+    .cmenu1 li {font-size: 15px; float: left;font-family: 'Pretendard'; color: #888888; margin-right: 10px;line-height: 40px; font-weight: 500; cursor: pointer; height: 37px;
+    width: 75px;}
+    .cmenu1 li:nth-of-type(1) {border-bottom: 2px solid #333;}
+    .cmenu1 li:hover{border-bottom: 2px solid #333; }
+    .cmenu1 > li> span {font-weight: 300;color:  #b6b6b6; }
+
+    .cmenu2 { width: 270px;}
+    .cmenu2 li {float: left; font-size: 13px; font-family: 'Pretendard'; color: #888888; margin: 0px 10px; text-align: center; line-height: 40px; font-weight: 500; cursor: pointer;}
+    .cmenu2 li:hover {color:#525252;}
+
+    .com_num {width: 100%; height: 143px; display: flex; align-items: center; border-bottom: 1px solid rgb(233, 233, 233);}
+
+    .com_num:nth-of-type(11) {border: none;}
+    
+    .com_num_left {width: 115px; height: 109px; display: flex;
+    flex-flow: row wrap; align-content: space-between}
+    .left_star {@include starfont;}
+    .left_name {font-size: 12px; font-weight: 500;}
+    .left_name span {color: #fff; background-color: #838b92; font-weight: 200; padding: 3px; border-radius: 5px; margin-left: 2px;}
+    .left_date {color: #888888; font-size: 12px;
+    }
+    .left_dec {color: #888888; font-size: 12px;
+         font-weight: 500; margin-right: 10px; cursor: pointer;}
+
+
+    .com_num_right {width: 801px; height: 109px;  display: flex;
+    justify-content: space-between; flex-flow: row wrap;}
+    .com_num_right p {width: 100%; height: 50px;
+    font-size: 14px; font-weight: 500; color: rgb(107, 107, 107);}
+    .com_num_right .combtn {width: 100%; display: flex; justify-content: flex-end;}
+    .com_num_right button {width: 55px; height: 25px;
+    font-size: 12px; border-radius: 5px; border: 1px solid #9ea7ad; color: #7b8286; margin-left: 5px; background-color: white; cursor: pointer;}
+    .com_num_right button img {width: 12px; margin-right: 3px; height: 10px; }
+    .com_num_right button:hover {background-color: #e6e6e6;}
+
+    
+
+
+    // 댓글 더보기
+    .see_more {width: 876px; height: 47px;  border-radius: 5px; background-color: white;
+        border: 2px solid #b4b4b4; display: flex;
+    justify-content: center; align-items: center;cursor: pointer;}
+    .see_more:hover {background-color: #e6e6e6;}
+    
+    .see_more p {font-size: 14px; font-weight: 500; color:#888888;}
+    .see_more span {color: #1E9EFF; }
+
+    .cmentbox {display: none;}
+
+
+
+    // 우주 3부작
+    .three {width: 100%; padding: 0px 10px; margin-bottom: 70px}
+    .three_title {@include h2titlesub;}
+    .thrlist {width: 100%; height: 220px; }
+    .thrlist li {float: left; width: 175px; height: 210px; padding: 20px 40px;  margin: 2px; display: flex; justify-content: center; flex-flow: row wrap;}
+    .thrlist li img {width: 100%; cursor: pointer;}
+    .thrlist li p {font-size: 15px; font-weight: 700;
+    margin-top: 5px; width: 95px;}
+
+
+    // 이 책과 함께 구매한 책
+    .buy_together {width: 100%; padding: 0px 10px; margin-bottom: 70px}
+    .buy_title {@include h2titlesub;}
+    .buy_list {width: 100%; height: 440px; }
+    .buy_list li {float: left; width: 175px; height: 210px; padding: 20px 40px;  margin: 2px; display: flex; justify-content: center; flex-flow: row wrap;}
+    .buy_list li img {width: 100%; cursor: pointer;}
+    .buy_list li h5 {font-size: 15px; font-weight: 700; overflow: hidden; display: inline-block;
+        text-overflow: ellipsis; white-space: nowrap;
+    margin-top: 5px; width: 95px;}
+    .buy_list li p {font-size: 13px; color: #525252; font-weight: 500; width: 95px; justify-content: flex-start; height: 20px; line-height: 25px; 
+        overflow: hidden; display: inline-block; }
+
+
     // 사이드컨텐츠
-    #section2 {width:234px; height: 100%; background-color: skyblue;}
+    #section2 {width:234px; height: 100%;}
     #section2 img {width:203px;}
 
-    .sfbestwrap {width: 100%; display: flex; justify-content: center;}
-    .sfbestwrap ul {width: 173px; background-color: gold;}
-    .sfbestwrap ul li {width: 100%; height: 17px; margin: 10px 0px;}
-    .sfbestwrap ul li p{ overflow: hidden; width: 100%; font-size: 14px; text-overflow: ellipsis; white-space: nowrap;} 
+    .sfbestwrap {width: 100%; display: flex; justify-content: center; margin-top: 20px;}
+    .sfbestwrap ul {width: 173px; }
+    .sfbestwrap ul h5 {margin-bottom: 12px; cursor: pointer;}
+    .sfbestwrap ul li {width: 100%; height: 17px; margin: 10px 0px; cursor: pointer;}
+    
+    .sfbestwrap ul li span {width: 25px; height: 20px;  float: left; color: rgb(255, 42, 5); font-style: italic; font-weight: 500; font-size: 14px;}
+    .sfbestwrap ul li p { overflow: hidden; width: 140px; font-size: 14px; text-overflow: ellipsis; white-space: nowrap;}
+
+

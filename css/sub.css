@@ -4,6 +4,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "SOYOMapleBoldTTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 /*
 Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
 https://github.com/orioncactus/pretendard
@@ -90,7 +96,7 @@ h1, h2, h3, h4, h5, p, span {
 
 section {
   width: 100%;
-  height: 7000px;
+  height: auto;
   display: flex;
   justify-content: center;
 }
@@ -98,13 +104,11 @@ section {
 #section1 {
   width: 936px;
   height: 100%;
-  background-color: rgb(250, 244, 208);
 }
 
 .bookitbox {
   width: 936px;
   height: 626px;
-  background-color: salmon;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -343,6 +347,38 @@ section {
 
 .infobox ul li:nth-of-type(1) p {
   height: 18px;
+}
+
+#previewbox {
+  width: 1000px;
+  height: 80%;
+  background-color: gold;
+  position: absolute;
+  top: 10%;
+  left: 24%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-flow: row wrap;
+  display: none;
+}
+
+.projecthm {
+  width: 80%;
+  height: 10%;
+  background-color: skyblue;
+}
+
+.hm_contents_slide {
+  width: 80%;
+  height: 90%;
+  background-color: rgb(169, 226, 169);
+}
+
+.hm_index {
+  width: 20%;
+  height: 100%;
+  background-color: orange;
 }
 
 .workintrobox {
@@ -616,7 +652,6 @@ section {
 .review {
   width: 100%;
   padding: 0px 10px;
-  background-color: #d0eeb3;
   height: auto;
 }
 
@@ -634,7 +669,6 @@ section {
 .rvbox {
   width: 100%;
   height: 286px;
-  background-color: #f5b17a;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -643,7 +677,6 @@ section {
 .rvbox .rvscope {
   width: 120px;
   height: 286px;
-  background-color: gold;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -653,8 +686,10 @@ section {
 
 .rvscope p {
   width: 100%;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
+  color: #888888;
+  font-weight: 500;
 }
 
 .rvscope h1 {
@@ -665,8 +700,10 @@ section {
 
 .rvscope span {
   width: 100%;
-  color: #ee7e23;
   text-align: center;
+  margin-bottom: 7px;
+  color: #ee7e23;
+  font-family: "SOYOMapleBoldTTF";
 }
 
 .rvscope ul {
@@ -675,40 +712,107 @@ section {
 
 .rvscope ul li {
   width: 100px;
-  background-color: green;
-  margin: 10px 0px;
-  font-size: 14px;
+  float: left;
+  margin: 5px 0px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rvscope ul li p {
+  font-size: 12px;
+  width: 30px;
+  font-weight: 500;
+  font-family: "SOYOMapleBoldTTF";
+  color: #888888;
+}
+
+.rvscope ul li .scrange {
+  width: 70px;
+  height: 10px;
+  background-color: rgb(228, 228, 228);
+  display: flex;
+}
+
+.scrange .scbar1 {
+  width: 85%;
+  height: 100%;
+  background: linear-gradient(#bdbdbd, #888888);
+}
+
+.scrange .scbar2 {
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(#bdbdbd, #888888);
+}
+
+.scrange .scbar3 {
+  width: 2%;
+  height: 100%;
+  background: linear-gradient(#bdbdbd, #888888);
+}
+
+.people {
+  height: 30px;
+  width: 85%;
+  margin-top: 5px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #525252;
+  border-top: 1px solid #888888;
 }
 
 .rveval {
   width: 794px;
   height: 286px;
-  background-color: orange;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   align-content: center;
+  position: relative;
 }
 
-.rveval p {
+.rveval .starwrap {
+  position: absolute;
+  top: 23px;
+  width: 100px;
+  height: 40px;
+  left: 338px;
+}
+
+.starwrap img {
+  position: absolute;
+  display: none;
+}
+
+.rveval > .pbox {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.pbox p {
   font-size: 18px;
   color: #525252;
   font-weight: 600;
-  padding: 0px 200px;
 }
 
 .star {
   height: 70px;
-  background-color: skyblue;
+  display: flex;
+  align-items: center;
 }
 
 .star li {
-  font-size: 40px;
+  font-size: 48px;
   float: left;
   color: #b4b4b4;
   width: 64px;
   height: 48px;
   cursor: pointer;
+  font-family: "SOYOMapleBoldTTF";
 }
 
 .star li:hover {
@@ -723,6 +827,7 @@ section {
   outline: none;
   color: #525252;
   padding: 0px 20px;
+  font-size: 15px;
 }
 
 #rvwrite::placeholder {
@@ -738,7 +843,6 @@ section {
   justify-content: right;
   width: 100%;
   align-items: center;
-  background-color: yellow;
 }
 
 .spobox input {
@@ -751,8 +855,8 @@ section {
   font-size: 14px;
   font-family: "Pretendard";
   height: 20px;
-  background-color: gold;
   text-align: center;
+  color: #525252;
   line-height: 20px;
   font-weight: 500;
 }
@@ -768,10 +872,356 @@ section {
   font-family: "Pretendard";
 }
 
+.rvpopup {
+  width: 420px;
+  height: 50px;
+  background-color: #1b1b1b;
+  top: 15%;
+  border-radius: 5px;
+  left: 37%;
+  position: fixed;
+  display: flex;
+  justify-content: left;
+  opacity: 0.9;
+  display: none;
+  flex-flow: row wrap;
+  padding: 15px 0px;
+}
+
+.rvpopup img {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  float: left;
+}
+
+.notice {
+  font-size: 14px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  color: #f88792;
+  line-height: 20px;
+  float: left;
+}
+
+.rvpopup > span img {
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-left: 220px;
+  cursor: pointer;
+}
+
+.rvpopup > span:hover {
+  opacity: 0.5;
+}
+
+#comment {
+  width: 100%;
+  height: auto;
+  padding: 0px 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.comment_menu {
+  width: 916px;
+  height: 37px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #b4b4b4;
+}
+
+.cmenu1 {
+  float: left;
+  width: 200px;
+}
+
+.cmenu1 li {
+  font-size: 15px;
+  float: left;
+  font-family: "Pretendard";
+  color: #888888;
+  margin-right: 10px;
+  line-height: 40px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 37px;
+  width: 75px;
+}
+
+.cmenu1 li:nth-of-type(1) {
+  border-bottom: 2px solid #333;
+}
+
+.cmenu1 li:hover {
+  border-bottom: 2px solid #333;
+}
+
+.cmenu1 > li > span {
+  font-weight: 300;
+  color: #b6b6b6;
+}
+
+.cmenu2 {
+  width: 270px;
+}
+
+.cmenu2 li {
+  float: left;
+  font-size: 13px;
+  font-family: "Pretendard";
+  color: #888888;
+  margin: 0px 10px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cmenu2 li:hover {
+  color: #525252;
+}
+
+.com_num {
+  width: 100%;
+  height: 143px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.com_num:nth-of-type(11) {
+  border: none;
+}
+
+.com_num_left {
+  width: 115px;
+  height: 109px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+}
+
+.left_star {
+  color: #ee7e23;
+  font-family: "SOYOMapleBoldTTF";
+}
+
+.left_name {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.left_name span {
+  color: #fff;
+  background-color: #838b92;
+  font-weight: 200;
+  padding: 3px;
+  border-radius: 5px;
+  margin-left: 2px;
+}
+
+.left_date {
+  color: #888888;
+  font-size: 12px;
+}
+
+.left_dec {
+  color: #888888;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.com_num_right {
+  width: 801px;
+  height: 109px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.com_num_right p {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(107, 107, 107);
+}
+
+.com_num_right .combtn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.com_num_right button {
+  width: 55px;
+  height: 25px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #9ea7ad;
+  color: #7b8286;
+  margin-left: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.com_num_right button img {
+  width: 12px;
+  margin-right: 3px;
+  height: 10px;
+}
+
+.com_num_right button:hover {
+  background-color: #e6e6e6;
+}
+
+.see_more {
+  width: 876px;
+  height: 47px;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid #b4b4b4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.see_more:hover {
+  background-color: #e6e6e6;
+}
+
+.see_more p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #888888;
+}
+
+.see_more span {
+  color: #1E9EFF;
+}
+
+.cmentbox {
+  display: none;
+}
+
+.three {
+  width: 100%;
+  padding: 0px 10px;
+  margin-bottom: 70px;
+}
+
+.three_title {
+  width: 100%;
+  border-bottom: 2px solid #525252;
+  padding: 10px 0px;
+  height: 45px;
+  font-size: 14px;
+}
+.three_title h2 {
+  color: #59667a;
+}
+
+.thrlist {
+  width: 100%;
+  height: 220px;
+}
+
+.thrlist li {
+  float: left;
+  width: 175px;
+  height: 210px;
+  padding: 20px 40px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.thrlist li img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.thrlist li p {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 5px;
+  width: 95px;
+}
+
+.buy_together {
+  width: 100%;
+  padding: 0px 10px;
+  margin-bottom: 70px;
+}
+
+.buy_title {
+  width: 100%;
+  border-bottom: 2px solid #525252;
+  padding: 10px 0px;
+  height: 45px;
+  font-size: 14px;
+}
+.buy_title h2 {
+  color: #59667a;
+}
+
+.buy_list {
+  width: 100%;
+  height: 440px;
+}
+
+.buy_list li {
+  float: left;
+  width: 175px;
+  height: 210px;
+  padding: 20px 40px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.buy_list li img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.buy_list li h5 {
+  font-size: 15px;
+  font-weight: 700;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 5px;
+  width: 95px;
+}
+
+.buy_list li p {
+  font-size: 13px;
+  color: #525252;
+  font-weight: 500;
+  width: 95px;
+  justify-content: flex-start;
+  height: 20px;
+  line-height: 25px;
+  overflow: hidden;
+  display: inline-block;
+}
+
 #section2 {
   width: 234px;
   height: 100%;
-  background-color: skyblue;
 }
 
 #section2 img {
@@ -782,22 +1232,38 @@ section {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .sfbestwrap ul {
   width: 173px;
-  background-color: gold;
+}
+
+.sfbestwrap ul h5 {
+  margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .sfbestwrap ul li {
   width: 100%;
   height: 17px;
   margin: 10px 0px;
+  cursor: pointer;
+}
+
+.sfbestwrap ul li span {
+  width: 25px;
+  height: 20px;
+  float: left;
+  color: rgb(255, 42, 5);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .sfbestwrap ul li p {
   overflow: hidden;
-  width: 100%;
+  width: 140px;
   font-size: 14px;
   text-overflow: ellipsis;
   white-space: nowrap;
