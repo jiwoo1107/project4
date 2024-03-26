@@ -163,6 +163,23 @@ $.ajax({
             })
         })
 
+        $(function(){
+            $.get("./sub_text/ct_01.txt", function(data){
+                $('.ct_01').html(data)
+            })
+        })
+
+        $(function(){
+            $.get("./sub_text/ct_02.txt", function(data){
+                $('.ct_02').html(data)
+            })
+        })
+
+        $(function(){
+            $.get("./sub_text/ct_03.txt", function(data){
+                $('.ct_03').html(data)
+            })
+        })
         // 접기, 펼쳐보기
         $(function(){
             $('.textbox').click(function(){
@@ -249,4 +266,56 @@ $.ajax({
             })
         })
 
-    
+
+        // 미리보기 글씨 크기
+        $(function(){
+
+            var size = 18;
+            var lsize = 45;
+            var ct = $('.ct_01')
+
+            $('.textwrap button').on("click", function(){
+                var btn_index = $(".textwrap button").index(this);
+
+                if(btn_index ==0){
+                    size--;
+                    lsize--;
+                    ct.css("font-size", size + "px");
+                    ct.css("line-height", lsize + "px");
+                    
+
+                }else if (btn_index == 1){
+                    size++;
+                    lsize++;
+                    ct.css("font-size", size + "px");
+                    ct.css("line-height", lsize + "px");
+
+                }
+
+            })
+        })
+
+
+        // 미리보기 버튼 누르면 보이게
+        $(function(){
+            $('.bookimgbox button').click(function(){
+                $('#pvwrap').show();
+            })
+            $('.projecthm h3').click(function(){
+                $('#pvwrap').hide();
+            })
+        })
+
+        // 목차 누르면 각 챕터
+
+        $(function(){
+            $('.idx_txt_nb').click(function(){
+                let i = $(this).index();
+
+                $('.hm_contents_slide div').eq(i).show()
+                .siblings('.hm_contents_slide div').hide();
+                
+                
+            })
+        })
+
