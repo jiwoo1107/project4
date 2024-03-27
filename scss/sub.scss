@@ -38,17 +38,20 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
 @mixin contents_box {width: 600px; height: 685px; display: flex; justify-content: center; flex-flow: row wrap;}
 
 
+
+
 // 페이지
     section {width: 100%; height: auto;  display: flex; justify-content: center;}
+
 
     // 중앙 컨텐츠
     #section1 {width: 936px; height: 100%;}
     .bookitbox {width: 936px; height: 626px;  display: flex; flex-flow: row wrap; justify-content: space-between; padding: 20px 10px;}
     .bookimgbox {width: 220px; height: 337px;  display: flex; flex-flow: row wrap; align-content: space-between;}
-    .bookimgbox img {width: 200px; height: 286px;}
+    .bookimgbox img {width: 200px; height: 286px; cursor:zoom-in;}
     .bookimgbox button {width: 130px; height: 39px;border-radius: 5px; border: 1px solid #1E9EFF;
-    order: 1; margin-left: 35px;}
-    .bookimgbox > button > p {color: #1E9EFF; font-size: 16px; font-weight: 500;}
+    order: 1; margin-left: 35px; color: #1E9EFF; font-size: 16px; font-weight: 500; font-family: 'Pretendard';}
+    
     .bookimgbox button:hover {background-color: rgb(215, 236, 252); cursor: pointer;}
 
     .booktextbox {width: 635px; height: 360px;  display: flex; flex-flow: row wrap; align-content: flex-start;}
@@ -89,15 +92,22 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .infobox ul li{width: 360px; font-size: 13px; font-weight: 600; padding: 3px 0px;}
     .infobox ul li p {width: 100px; float: left;}
     .infobox ul li span {font-weight: 400; width: 200px;}
-    .infobox ul li:nth-of-type(1) p {
-        height: 18px;}
+    .infobox ul li:nth-of-type(1) p {height: 18px;}
 
+    // 커버이미지팝업
+    .imgpopup {width: 100%; height: 100%; background-color: #1b1b1be8; position: absolute; top: 0px; left: 0px; position: fixed; z-index: 1;  display: none;}
+    .imgpopup_wrap {width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+    .popupbox {width: 530px; height: 790px;}
+    .popupbox > .xbox {display: flex; justify-content: right; padding: 5px 0px; cursor: zoom-out;}
+    .popupbox > .xbox > img {width: 20px; height: 20px;}
+    .popupbox > .xbox > img:hover {opacity: 0.5;}
+    .popupbox img {width: 530px; height: 750px;}
 
     // 미리보기
-    #pvwrap {width: 100%; height: 100%; background-color: #1b1b1be8;z-index: 1; top: 0px; left: 0px; 
-    position: fixed; display: none;}
-    .previewbox {width: 900px; height: 800px; background-color: gold; display: flex; justify-content: center; flex-flow: row wrap; align-items: center; left: 25%; position: absolute; top: 8%;
-    }
+    #pvwrap {width: 100%; height: 100%; background-color: #1b1b1be8; z-index: 1; top: 0px; left: 0px; position: fixed; display: none;}
+    .previewbox_wrap {width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+    .previewbox {width: 900px; height: 800px; background-color: gold; display: flex; justify-content: center; flex-flow: row wrap; align-items: center; }
+
 
     .projecthm {width: 670px; height: 45px; background-color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 0px 20px; border-bottom: 1px solid #979797}
     .projecthm h3:hover {color: #1E9EFF; cursor: pointer;}
@@ -131,29 +141,47 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
         font-weight: 400;}
     .ct_03::-webkit-scrollbar {display: none;}
 
+
     //미리보기 목차 부분
     .hm_index {width: 230px; height: 800px; background-color: yellow;}
     .hm_index_title {width: 100%; height: 45px; background-color: #e4e4e4; border-bottom: 1px solid #979797; display: flex; align-items: center; padding: 0px 20px; color: #afb3b6;  }
     .idx_txt {width: 100%; height: 755px; background-color: #d69191; overflow-y: scroll; font-family: 'Pretendard'; font-size: 14px; font-weight: 500;}
-    .idx_txt_nb {width: 100%; height: 45px; background-color: #e4e4e4; border-bottom: 1px solid #dadada; display: flex; align-items: center; padding: 0px 20px; color: #afb3b6; }
+    .idx_txt::-webkit-scrollbar {
+        width: 10px; background-color:#e4e4e4;
+       
+      }
+      .idx_txt::-webkit-scrollbar-thumb {
+        background-color: #333;
+        border-radius: 10px;
+        background-clip: padding-box;
+        border: 2px solid transparent;
+      }
+
+    .idx_txt_nb {width: 100%; height: 45px; background-color: #e4e4e4; border-bottom: 1px solid #dadada; display: flex; align-items: center; padding: 0px 20px; color: #afb3b6;}
 
     .idx_txt_nb:nth-child(-n+5) {color: #333;}
     .idx_txt_nb:nth-child(-n+5):hover {background-color: #d1d1d1; cursor: pointer;}
+
+
     
     // 작품소개
     .workintrobox {width: 100%; height: auto;  padding: 0px 10px; margin-bottom: 50px; }
-    .textbox {cursor: pointer;}
+    .textbox {cursor: pointer; }
     .worktitle {@include h2titlesub;}
-    .worktext { @include dttxt; height: auto; margin-top: 15px}
-    .worktext2 { @include dttxt;display: none;}
+    .worktext { @include dttxt; height: auto; margin-top: 15px;}
+    .worktext2 { @include dttxt; display: none;}
 
-    .tgbtn { text-align: right; width: 100%; display: flex;
-    align-items: center; justify-content: right;}
+    .tgbtn {text-align: right; width: 100%; display: flex;align-items: center; justify-content: right;}
     .tgbtn p {float: left; margin-right: 5px; font-size: 14px; color: #1E9EFF;}
-    .tgbtn .tgimg {background-color: #1E9EFF; width: 15px; height: 15px; display: flex; justify-content: center; border-radius: 100%;
+    .tgbtn .tgimg {background-color: #1E9EFF; width: 15px; height: 15px; display: flex; justify-content: center;border-radius: 100%; align-items: center;}
+    .tgimg img{width: 11px; height: 15px;}
+    
+    .tgbtnclose {text-align: right; width: 100%; display: none;}
+    .tgbtnclose p {float: left; font-size: 14px; color: #1E9EFF; margin-left: 870px; margin-right: 5px;}
+    .tgbtnclose .tgimgclose {background-color: #1E9EFF; width: 15px; height: 15px; display: flex; justify-content: center; border-radius: 100%;
     align-items: center;}
-    .tgimg img{width: 12px;}
-
+    .tgimgclose img{width: 11px; height: 15px;}
+    
 
     // 출판사 서평
     .pbbox {width: 100%; padding: 0px 10px; margin-bottom: 50px}
@@ -162,6 +190,17 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .pbtextbox {cursor: pointer;}
     .pbtext { @include dttxt; height: auto; margin-top: 15px; height: 161px; }
     .pbtext2 { @include dttxt;  display: none;}
+
+    .tgbtn2 {text-align: right; width: 100%; display: flex;align-items: center; justify-content: right;}
+    .tgbtn2 p {float: left; margin-right: 5px; font-size: 14px; color: #1E9EFF;}
+    .tgbtn2 .tgimg2 {background-color: #1E9EFF; width: 15px; height: 15px; display: flex; justify-content: center;border-radius: 100%; align-items: center;}
+    .tgimg2 img{width: 11px; height: 15px;}
+    
+    .tgbtnclose2 {text-align: right; width: 100%; display: none;}
+    .tgbtnclose2 p {float: left; font-size: 14px; color: #1E9EFF; margin-left: 870px; margin-right: 5px;}
+    .tgbtnclose2 .tgimgclose2 {background-color: #1E9EFF; width: 15px; height: 15px; display: flex; justify-content: center; border-radius: 100%;
+    align-items: center;}
+    .tgimgclose2 img{width: 11px; height: 15px;}
 
     // 저자 프로필
     .pfbox {width: 100%; padding: 0px 10px; height: auto; margin-bottom: 50px}
@@ -208,7 +247,16 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .attext { @include dttxt; height: auto; margin-top: 15px; height: 161px; }
     .attext2 { @include dttxt; display: none;}
 
-
+    .tgbtn3 {text-align: right; width: 100%; display: flex;align-items: center; justify-content: right;}
+    .tgbtn3 p {float: left; margin-right: 5px; font-size: 14px; color: #1E9EFF;}
+    .tgbtn3 .tgimg3 {background-color: #1E9EFF; width: 15px; height: 15px; display: flex; justify-content: center;border-radius: 100%; align-items: center;}
+    .tgimg3 img{width: 11px; height: 15px;}
+    
+    .tgbtnclose3 {text-align: right; width: 100%; display: none;}
+    .tgbtnclose3 p {float: left; font-size: 14px; color: #1E9EFF; margin-left: 870px; margin-right: 5px;}
+    .tgbtnclose3 .tgimgclose3 {background-color: #1E9EFF; width: 15px; height: 15px; display: flex; justify-content: center; border-radius: 100%;
+    align-items: center;}
+    .tgimgclose3 img{width: 11px; height: 15px; }
 
     // 리뷰 - 구매자 별점
     .review {width: 100%; padding: 0px 10px;   
@@ -223,7 +271,6 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .rvscope h1 {width: 100%; font-size: 30px; text-align: center;}
     .rvscope span {width: 100%; text-align: center;  margin-bottom: 7px; @include starfont;}
 
-    
     .rvscope ul {width: 100px; }
     .rvscope ul li {width: 100px; float: left; margin: 5px 0px; align-items: center;
     display: flex; justify-content: flex-start;}
@@ -245,7 +292,7 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .rveval .starwrap{position: absolute;
     top: 23px;  width: 100px; height: 40px; left: 338px; }
 
-    .starwrap img {position: absolute; display: none;}
+    .starwrap img {position: absolute; display: none; }
 
     .rveval > .pbox {width: 500px; height: 50px; display: flex; justify-content: center; align-items: flex-end;}
     .pbox p{font-size: 18px; color: #525252; font-weight: 600;}
@@ -255,9 +302,8 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .star li {font-size: 48px; float: left; color: #b4b4b4; width: 64px; height: 48px; cursor: pointer; font-family: 'SOYOMapleBoldTTF';}
     .star li:hover {color: #ee7e23;}
     #rvwrite {width: 95%; height: 112px; border-radius: 7px; border: 2px solid #b4b4b4; outline: none; color: #525252; 
-    padding: 0px 20px; font-size: 15px;}
-    #rvwrite::placeholder {position: absolute;  font-family: 'Pretendard';top:20px; color:
-        #1b1b1b; font-size: 15px; }
+    padding: 0px 20px; font-size: 15px; font-family: 'Pretendard'; color: #1b1b1b;}
+    
     
     
     .spobox {display: flex; justify-content: right; width: 100%; align-items: center; }
@@ -268,8 +314,9 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
      text-align: center; color: #525252;
     line-height: 20px; font-weight: 500;}
 
-    .spobox > button {width: 95px; height: 30px; background-color: rgb(189, 189, 189); border: none; margin: 10px 20px; border-radius: 5px;
+    .spobox > button {width: 95px; height: 30px; background-color: rgb(189, 189, 189); border: none; margin: 10px 20px; border-radius: 5px; cursor: pointer; 
     color: #fff; font-family: 'Pretendard';}
+    .spobox > button:hover {opacity: 0.8;}
     
 
     .rvpopup {width: 420px; height: 50px; background-color: #1b1b1b; top: 15%; border-radius: 5px; left: 37%; position: fixed;
@@ -314,7 +361,7 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .com_num_right {width: 801px; height: 109px;  display: flex;
     justify-content: space-between; flex-flow: row wrap;}
     .com_num_right p {width: 100%; height: 50px;
-    font-size: 14px; font-weight: 500; color: rgb(107, 107, 107);}
+    font-size: 14px; font-weight: 400; }
     .com_num_right .combtn {width: 100%; display: flex; justify-content: flex-end;}
     .com_num_right button {width: 55px; height: 25px;
     font-size: 12px; border-radius: 5px; border: 1px solid #9ea7ad; color: #7b8286; margin-left: 5px; background-color: white; cursor: pointer;}
@@ -361,12 +408,12 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
 
 
     // 사이드컨텐츠
-    #section2 {width:234px; height: 100%;}
+    #section2 {width:234px; height: 100%; position: sticky; top: 10px; display: flex; flex-flow: row wrap; justify-content: right; }
     #section2 img {width:203px;}
 
-    .sfbestwrap {width: 100%; display: flex; justify-content: center; margin-top: 20px;}
-    .sfbestwrap ul {width: 173px; }
-    .sfbestwrap ul h5 {margin-bottom: 12px; cursor: pointer;}
+    .sfbestwrap {width: 100%; display: flex; justify-content: center; margin-top: 20px; flex-flow: row wrap;}
+    .sfbestwrap h4 {width: 170px; text-align: left;}
+    .sfbestwrap ul {width: 173px; font-family: 'Pretendard';margin-bottom: 12px; cursor: pointer;}
     .sfbestwrap ul li {width: 100%; height: 17px; margin: 10px 0px; cursor: pointer;}
     
     .sfbestwrap ul li span {width: 25px; height: 20px;  float: left; color: rgb(255, 42, 5); font-style: italic; font-weight: 500; font-size: 14px;}

@@ -28,7 +28,7 @@ $.ajax({
 
     for(let j=0; j < 1; j++){
 
-        $(".manyslide ol li").eq(i).append('<a href="#">' + "<img src='" + data[j].thumbnail + "'/>" + "</a>");
+        $(".manyslide ol li").eq(i).append('<a href="sub.html">' + "<img src='" + data[j].thumbnail + "'/>" + "</a>");
 
         $('.manyslide ol li').eq(i).append( "<h5>" + (i+1) + "</h5>")
 
