@@ -4,67 +4,11 @@
   font-weight: normal;
   font-style: normal;
 }
-/*
-Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
-https://github.com/orioncactus/pretendard
-
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-*/
 @font-face {
-  font-family: "Pretendard";
-  font-weight: 900;
-  font-display: swap;
-  src: local("Pretendard Black"), url(./woff2/Pretendard-Black.woff2) format("woff2"), url(./woff/Pretendard-Black.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 800;
-  font-display: swap;
-  src: local("Pretendard ExtraBold"), url(./woff2/Pretendard-ExtraBold.woff2) format("woff2"), url(./woff/Pretendard-ExtraBold.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-display: swap;
-  src: local("Pretendard Bold"), url(./woff2/Pretendard-Bold.woff2) format("woff2"), url(./woff/Pretendard-Bold.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-display: swap;
-  src: local("Pretendard SemiBold"), url(./woff2/Pretendard-SemiBold.woff2) format("woff2"), url(./woff/Pretendard-SemiBold.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 500;
-  font-display: swap;
-  src: local("Pretendard Medium"), url(./woff2/Pretendard-Medium.woff2) format("woff2"), url(./woff/Pretendard-Medium.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
-  font-display: swap;
-  src: local("Pretendard Regular"), url(./woff2/Pretendard-Regular.woff2) format("woff2"), url(./woff/Pretendard-Regular.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 300;
-  font-display: swap;
-  src: local("Pretendard Light"), url(./woff2/Pretendard-Light.woff2) format("woff2"), url(./woff/Pretendard-Light.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 200;
-  font-display: swap;
-  src: local("Pretendard ExtraLight"), url(./woff2/Pretendard-ExtraLight.woff2) format("woff2"), url(./woff/Pretendard-ExtraLight.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 100;
-  font-display: swap;
-  src: local("Pretendard Thin"), url(./woff2/Pretendard-Thin.woff2) format("woff2"), url(./woff/Pretendard-Thin.woff) format("woff");
+  font-style: normal;
 }
 * {
   margin: 0;
@@ -79,12 +23,12 @@ ul, ol, li {
 a {
   text-decoration: none;
   color: #333;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, p, span {
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   color: #333;
 }
 
@@ -161,7 +105,7 @@ h1, h2, h3, h4, h5, p, span {
   height: 35px;
   font-weight: 600;
   cursor: pointer;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 }
 
 .slideul li:nth-of-type(1) {
@@ -535,13 +479,14 @@ h1, h2, h3, h4, h5, p, span {
 }
 .manyslide ol li h4 {
   width: 170px;
-  height: 25px;
+  height: 23px;
   font-size: 16PX;
   display: flex;
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  display: block;
 }
 .manyslide ol li p {
   font-size: 14px;
@@ -609,7 +554,7 @@ h1, h2, h3, h4, h5, p, span {
   height: 15px;
   display: flex;
   align-items: center;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 }
 
 .manyslide ol li span:nth-of-type(1) {
@@ -837,13 +782,14 @@ h1, h2, h3, h4, h5, p, span {
 }
 .bestslide ol li h4 {
   width: 170px;
-  height: 25px;
+  height: 23px;
   font-size: 16PX;
   display: flex;
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  display: block;
 }
 .bestslide ol li p {
   font-size: 14px;
@@ -869,7 +815,7 @@ h1, h2, h3, h4, h5, p, span {
   height: 15px;
   display: flex;
   align-items: center;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 }
 
 .bestslide ol li span:nth-of-type(1) {
@@ -1168,7 +1114,7 @@ h1, h2, h3, h4, h5, p, span {
   display: flex;
   justify-content: center;
   font-weight: 500;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   cursor: pointer;
   font-size: 17px;
   line-height: 75px;
@@ -1332,7 +1278,7 @@ h1, h2, h3, h4, h5, p, span {
   width: 200px;
   height: 40px;
   color: #fff;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   font-weight: 700;
   margin: 0px 35px 0px 25px;
   font-size: 16px;
@@ -1490,7 +1436,7 @@ h1, h2, h3, h4, h5, p, span {
 .recom {
   font-size: 17px;
   font-weight: 600;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 }
 
 .textbox h1 {
@@ -1553,4 +1499,4 @@ h1, h2, h3, h4, h5, p, span {
 
 .slnext:hover {
   color: #c2c2c2;
-}
+}/*# sourceMappingURL=main.css.map */

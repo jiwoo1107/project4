@@ -10,67 +10,11 @@
   font-weight: 700;
   font-style: normal;
 }
-/*
-Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
-https://github.com/orioncactus/pretendard
-
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-*/
 @font-face {
-  font-family: "Pretendard";
-  font-weight: 900;
-  font-display: swap;
-  src: local("Pretendard Black"), url(./woff2/Pretendard-Black.woff2) format("woff2"), url(./woff/Pretendard-Black.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 800;
-  font-display: swap;
-  src: local("Pretendard ExtraBold"), url(./woff2/Pretendard-ExtraBold.woff2) format("woff2"), url(./woff/Pretendard-ExtraBold.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-display: swap;
-  src: local("Pretendard Bold"), url(./woff2/Pretendard-Bold.woff2) format("woff2"), url(./woff/Pretendard-Bold.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-display: swap;
-  src: local("Pretendard SemiBold"), url(./woff2/Pretendard-SemiBold.woff2) format("woff2"), url(./woff/Pretendard-SemiBold.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 500;
-  font-display: swap;
-  src: local("Pretendard Medium"), url(./woff2/Pretendard-Medium.woff2) format("woff2"), url(./woff/Pretendard-Medium.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
-  font-display: swap;
-  src: local("Pretendard Regular"), url(./woff2/Pretendard-Regular.woff2) format("woff2"), url(./woff/Pretendard-Regular.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 300;
-  font-display: swap;
-  src: local("Pretendard Light"), url(./woff2/Pretendard-Light.woff2) format("woff2"), url(./woff/Pretendard-Light.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 200;
-  font-display: swap;
-  src: local("Pretendard ExtraLight"), url(./woff2/Pretendard-ExtraLight.woff2) format("woff2"), url(./woff/Pretendard-ExtraLight.woff) format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 100;
-  font-display: swap;
-  src: local("Pretendard Thin"), url(./woff2/Pretendard-Thin.woff2) format("woff2"), url(./woff/Pretendard-Thin.woff) format("woff");
+  font-style: normal;
 }
 * {
   margin: 0;
@@ -85,12 +29,12 @@ ul, ol, li {
 a {
   text-decoration: none;
   color: #333;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, p, span {
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   color: #333;
 }
 
@@ -139,7 +83,7 @@ section {
   color: #1E9EFF;
   font-size: 16px;
   font-weight: 500;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 }
 
 .bookimgbox button:hover {
@@ -309,7 +253,7 @@ section {
   color: #fff;
   font-size: 15px;
   font-weight: 700;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 }
 
 .infobox {
@@ -447,7 +391,7 @@ section {
 .textwrap button {
   width: 42px;
   height: 30px;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   font-weight: 500;
   color: #333;
   background-color: #fff;
@@ -578,7 +522,7 @@ section {
   height: 755px;
   background-color: #d69191;
   overflow-y: scroll;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   font-size: 14px;
   font-weight: 500;
 }
@@ -872,12 +816,12 @@ section {
   color: #1E9EFF;
   margin-top: 20px;
   font-weight: 700;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 }
 
 .atpro table {
   width: 100%;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   font-size: 14px;
   margin-top: 10px;
 }
@@ -1210,7 +1154,7 @@ section {
   color: #525252;
   padding: 0px 20px;
   font-size: 15px;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   color: #1b1b1b;
 }
 
@@ -1229,7 +1173,7 @@ section {
 .spobox label {
   width: 130px;
   font-size: 14px;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   height: 20px;
   text-align: center;
   color: #525252;
@@ -1246,7 +1190,7 @@ section {
   border-radius: 5px;
   cursor: pointer;
   color: #fff;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
 }
 
 .spobox > button:hover {
@@ -1325,7 +1269,7 @@ section {
 .cmenu1 li {
   font-size: 15px;
   float: left;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   color: #888888;
   margin-right: 10px;
   line-height: 40px;
@@ -1355,7 +1299,7 @@ section {
 .cmenu2 li {
   float: left;
   font-size: 13px;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   color: #888888;
   margin: 0px 10px;
   text-align: center;
@@ -1628,7 +1572,7 @@ section {
 
 .sfbestwrap ul {
   width: 173px;
-  font-family: "Pretendard";
+  font-family: "Pretendard-Regular";
   margin-bottom: 12px;
   cursor: pointer;
 }
@@ -1656,4 +1600,4 @@ section {
   font-size: 14px;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
+}/*# sourceMappingURL=sub.css.map */

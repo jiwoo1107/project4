@@ -14,12 +14,19 @@
     font-style: normal;
 }
 
-@import "fonts/pretendard.scss";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ul,ol,li {list-style: none;}
-a {text-decoration: none; color: #333; font-family: 'Pretendard'; font-weight: 500;}
-h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
+a {text-decoration: none; color: #333; font-family: 'Pretendard-Regular'; font-weight: 500;}
+h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard-Regular'; color: #333;}
 
 @mixin centerbox {
     width: 1170px; height: 100%; 
@@ -50,7 +57,7 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .bookimgbox {width: 220px; height: 337px;  display: flex; flex-flow: row wrap; align-content: space-between;}
     .bookimgbox img {width: 200px; height: 286px; cursor:zoom-in;}
     .bookimgbox button {width: 130px; height: 39px;border-radius: 5px; border: 1px solid #1E9EFF;
-    order: 1; margin-left: 35px; color: #1E9EFF; font-size: 16px; font-weight: 500; font-family: 'Pretendard';}
+    order: 1; margin-left: 35px; color: #1E9EFF; font-size: 16px; font-weight: 500; font-family: 'Pretendard-Regular';}
     
     .bookimgbox button:hover {background-color: rgb(215, 236, 252); cursor: pointer;}
 
@@ -83,7 +90,7 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .btnwrap button {width: 48px; height: 48px; margin-left: 5px; border-radius: 5px; border:1px solid rgb(212, 212, 212); cursor: pointer;}
     .btnwrap button img {width: 18px;}
 
-    .btnwrap .textbtn {width: 112px; height: 48px; background-color: #1E9EFF; border: none; color: #fff; font-size: 15px; font-weight: 700; font-family: 'Pretendard';}
+    .btnwrap .textbtn {width: 112px; height: 48px; background-color: #1E9EFF; border: none; color: #fff; font-size: 15px; font-weight: 700; font-family: 'Pretendard-Regular';}
 
     .infobox {width: 100%; height: 150px; padding: 20px; display: flex; align-content: center;
     border: 5px solid rgb(212, 212, 212); border-radius: 1px;}
@@ -113,7 +120,7 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .projecthm h3:hover {color: #1E9EFF; cursor: pointer;}
 
     .textwrap {display: flex; justify-content:center}
-    .textwrap button {width: 42px; height: 30px; font-family: 'Pretendard'; font-weight: 500; color: #333; background-color: #fff; border: 1px solid #7b8286; border-radius: 5px; cursor: pointer;}
+    .textwrap button {width: 42px; height: 30px; font-family: 'Pretendard-Regular'; font-weight: 500; color: #333; background-color: #fff; border: 1px solid #7b8286; border-radius: 5px; cursor: pointer;}
     .textwrap > button:hover {background-color: #e6e6e6cc;}
     .textwrap button:nth-of-type(1) {font-size: 12px;}
     .textwrap button:nth-of-type(2) {font-size: 15px; margin-left: 5px;}
@@ -145,7 +152,7 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     //미리보기 목차 부분
     .hm_index {width: 230px; height: 800px; background-color: yellow;}
     .hm_index_title {width: 100%; height: 45px; background-color: #e4e4e4; border-bottom: 1px solid #979797; display: flex; align-items: center; padding: 0px 20px; color: #afb3b6;  }
-    .idx_txt {width: 100%; height: 755px; background-color: #d69191; overflow-y: scroll; font-family: 'Pretendard'; font-size: 14px; font-weight: 500;}
+    .idx_txt {width: 100%; height: 755px; background-color: #d69191; overflow-y: scroll; font-family: 'Pretendard-Regular'; font-size: 14px; font-weight: 500;}
     .idx_txt::-webkit-scrollbar {
         width: 10px; background-color:#e4e4e4;
        
@@ -221,8 +228,8 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .atpro h2 {width:100%; font-size: 20px; margin-top:20px;}
     .atpro button {width:168px; height: 30px;border-radius: 5px; border: 1px solid #1E9EFF;
         color: #1E9EFF;margin-top:20px;
-    font-weight:700; font-family: 'Pretendard';}
-    .atpro table {width:100%;font-family: 'Pretendard'; font-size: 14px; margin-top: 10px;}
+    font-weight:700; font-family: 'Pretendard-Regular';}
+    .atpro table {width:100%;font-family: 'Pretendard-Regular'; font-size: 14px; margin-top: 10px;}
     .atpro table tr {line-height: 23px;} 
     .atpro table tr td:nth-of-type(1) {color: #525252; width:35px; }
 
@@ -302,7 +309,7 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     .star li {font-size: 48px; float: left; color: #b4b4b4; width: 64px; height: 48px; cursor: pointer; font-family: 'SOYOMapleBoldTTF';}
     .star li:hover {color: #ee7e23;}
     #rvwrite {width: 95%; height: 112px; border-radius: 7px; border: 2px solid #b4b4b4; outline: none; color: #525252; 
-    padding: 0px 20px; font-size: 15px; font-family: 'Pretendard'; color: #1b1b1b;}
+    padding: 0px 20px; font-size: 15px; font-family: 'Pretendard-Regular'; color: #1b1b1b;}
     
     
     
@@ -310,12 +317,12 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
 
     .spobox input {width : 20px; height: 30px;}
     .spobox label {width : 130px; font-size: 14px;
-        font-family: 'Pretendard'; height: 20px;
+        font-family: 'Pretendard-Regular'; height: 20px;
      text-align: center; color: #525252;
     line-height: 20px; font-weight: 500;}
 
     .spobox > button {width: 95px; height: 30px; background-color: rgb(189, 189, 189); border: none; margin: 10px 20px; border-radius: 5px; cursor: pointer; 
-    color: #fff; font-family: 'Pretendard';}
+    color: #fff; font-family: 'Pretendard-Regular';}
     .spobox > button:hover {opacity: 0.8;}
     
 
@@ -333,14 +340,14 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
     #comment {width: 100%; height: auto;  padding: 0px 10px; display: flex; flex-flow: row wrap; justify-content: center; margin-bottom: 100px;}
     .comment_menu {width: 916px; height: 37px;  display: flex; justify-content: space-between; border-bottom: 2px solid #b4b4b4;}
     .cmenu1 {float: left; width: 200px; }
-    .cmenu1 li {font-size: 15px; float: left;font-family: 'Pretendard'; color: #888888; margin-right: 10px;line-height: 40px; font-weight: 500; cursor: pointer; height: 37px;
+    .cmenu1 li {font-size: 15px; float: left;font-family: 'Pretendard-Regular'; color: #888888; margin-right: 10px;line-height: 40px; font-weight: 500; cursor: pointer; height: 37px;
     width: 75px;}
     .cmenu1 li:nth-of-type(1) {border-bottom: 2px solid #333;}
     .cmenu1 li:hover{border-bottom: 2px solid #333; }
     .cmenu1 > li> span {font-weight: 300;color:  #b6b6b6; }
 
     .cmenu2 { width: 270px;}
-    .cmenu2 li {float: left; font-size: 13px; font-family: 'Pretendard'; color: #888888; margin: 0px 10px; text-align: center; line-height: 40px; font-weight: 500; cursor: pointer;}
+    .cmenu2 li {float: left; font-size: 13px; font-family: 'Pretendard-Regular'; color: #888888; margin: 0px 10px; text-align: center; line-height: 40px; font-weight: 500; cursor: pointer;}
     .cmenu2 li:hover {color:#525252;}
 
     .com_num {width: 100%; height: 143px; display: flex; align-items: center; border-bottom: 1px solid rgb(233, 233, 233);}
@@ -413,7 +420,7 @@ h1,h2,h3,h4,h5,p,span {font-family: 'Pretendard'; color: #333;}
 
     .sfbestwrap {width: 100%; display: flex; justify-content: center; margin-top: 20px; flex-flow: row wrap;}
     .sfbestwrap h4 {width: 170px; text-align: left;}
-    .sfbestwrap ul {width: 173px; font-family: 'Pretendard';margin-bottom: 12px; cursor: pointer;}
+    .sfbestwrap ul {width: 173px; font-family: 'Pretendard-Regular';margin-bottom: 12px; cursor: pointer;}
     .sfbestwrap ul li {width: 100%; height: 17px; margin: 10px 0px; cursor: pointer;}
     
     .sfbestwrap ul li span {width: 25px; height: 20px;  float: left; color: rgb(255, 42, 5); font-style: italic; font-weight: 500; font-size: 14px;}
